@@ -1,13 +1,13 @@
-// PDFCraft Chrome Extension - Background Service Worker
+// PDFReader Chrome Extension - Background Service Worker
 
-const PDFCRAFT_URL = 'https://pdfcraft.devtoolcafe.com/en';
+const PDFREADER_URL = 'https://pdf-reader.com/en';
 
 // Create context menu when extension is installed
 chrome.runtime.onInstalled.addListener(() => {
     // Create main context menu item
     chrome.contextMenus.create({
         id: 'pdfcraft-open',
-        title: 'Open with PDFCraft',
+        title: 'Open with PDFReader',
         contexts: ['link', 'page']
     });
 
@@ -40,34 +40,34 @@ chrome.runtime.onInstalled.addListener(() => {
         contexts: ['link', 'page']
     });
 
-    console.log('PDFCraft context menus created');
+    console.log('PDFReader context menus created');
 });
 
 // Handle context menu clicks
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-    let url = PDFCRAFT_URL;
+    let url = PDFREADER_URL;
 
     switch (info.menuItemId) {
         case 'pdfcraft-merge':
-            url = `${PDFCRAFT_URL}/tools/merge-pdf`;
+            url = `${PDFREADER_URL}/tools/merge-pdf`;
             break;
         case 'pdfcraft-compress':
-            url = `${PDFCRAFT_URL}/tools/compress-pdf`;
+            url = `${PDFREADER_URL}/tools/compress-pdf`;
             break;
         case 'pdfcraft-convert':
-            url = `${PDFCRAFT_URL}/tools/jpg-to-pdf`;
+            url = `${PDFREADER_URL}/tools/jpg-to-pdf`;
             break;
         case 'pdfcraft-all-tools':
         case 'pdfcraft-open':
-            url = PDFCRAFT_URL;
+            url = PDFREADER_URL;
             break;
         default:
-            url = PDFCRAFT_URL;
+            url = PDFREADER_URL;
     }
 
-    // Open PDFCraft in a new tab
+    // Open PDFReader in a new tab
     chrome.tabs.create({ url: url });
 });
 
 // Log when service worker starts
-console.log('PDFCraft background service worker started');
+console.log('PDFReader background service worker started');

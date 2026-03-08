@@ -170,7 +170,7 @@ export function generateToolMetadata(options: ToolMetadataOptions): Metadata {
  * Generate metadata for the homepage
  */
 export function generateHomeMetadata(locale: Locale, translations?: { title: string; description: string }): Metadata {
-  const defaultTitle = `${siteConfig.name} - Professional PDF Tools`;
+  const defaultTitle = `${siteConfig.name} - Professional online PDF tools and Android reader`;
   const defaultDescription = siteConfig.description;
 
   return generateBaseMetadata({

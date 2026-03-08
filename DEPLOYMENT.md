@@ -1,4 +1,4 @@
-# PDFCraft Static Export Deployment Guide
+# PDFReader Static Export Deployment Guide
 
 This project is configured for static export, making it deployable to any static hosting provider.
 
@@ -431,7 +431,7 @@ NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
 
 ## 🌐 Multi-language Routes
 
-PDFCraft supports multiple languages. The static export generates pages for all locales:
+PDFReader supports multiple languages. The static export generates pages for all locales:
 
 | Locale | URL Pattern | Example |
 |--------|-------------|---------|
@@ -474,7 +474,7 @@ The build includes:
 
 ## 📦 LibreOffice WASM Architecture
 
-PDFCraft uses [LibreOffice WASM](https://github.com/nichdiekuh/libreoffice-wasm) (`@matbee/libreoffice-converter`) for document conversion (Word, Excel, PowerPoint, RTF to PDF). Understanding the file serving architecture is important for deployment.
+PDFReader uses [LibreOffice WASM](https://github.com/nichdiekuh/libreoffice-wasm) (`@matbee/libreoffice-converter`) for document conversion (Word, Excel, PowerPoint, RTF to PDF). Understanding the file serving architecture is important for deployment.
 
 ### File Layout
 
