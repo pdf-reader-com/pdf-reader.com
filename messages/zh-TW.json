@@ -24,6 +24,10 @@
       "title": "聯絡我們",
       "description": "聯繫 PDFReader 團隊。我們很樂意聽取您的意見。"
     },
+    "downloadApp": {
+      "title": "下載應用",
+      "description": "下載 PDF Reader - 一款快速、輕量且注重隱私的 PDF 與文檔閱讀器，支援 Android、Windows、macOS、Linux 和 iOS。"
+    },
     "keywords": {
       "pdfTools": "PDF 工具",
       "mergePdf": "合併 PDF",
@@ -40,11 +44,12 @@
     "navigation": {
       "home": "首頁",
       "tools": "工具",
+      "workflow": "工作流",
+      "downloadApp": "下載應用",
       "about": "關於",
       "faq": "常見問題",
       "privacy": "隱私",
-      "contact": "聯絡我們",
-      "workflow": "工作流"
+      "contact": "聯絡我們"
     },
     "buttons": {
       "upload": "上傳檔案",
@@ -326,6 +331,24 @@
       "title": "準備好開始了嗎？",
       "description": "探索我們的 {count}+ 個 PDF 工具，看看 {brand} 能為您做什麼。",
       "button": "瀏覽所有工具"
+    }
+  },
+  "downloadAppPage": {
+    "title": "下載 PDF Reader",
+    "subtitle": "一款跨平台的快速、輕量且注重隱私的 PDF 與文檔閱讀器。",
+    "intro": {
+      "p1": "PDF Reader 是一款面向日常使用的快速、輕量且注重隱私的 PDF 與文檔閱讀器。基於 Flutter 建構，可在多平台流暢執行，支援開啟與預覽多種檔案類型，包括 PDF、Markdown、DOCX、PPT、XLSX 及其他常見辦公文檔格式。無論您需要簡單的 PDF 檢視器、便捷的辦公文檔閱讀器，還是多格式學習資料檢視器，pdf_reader 都能幫您快速開啟內容，介面簡潔無冗餘。",
+      "p2": "使用 pdf_reader，您可以完全掌控自己的檔案。文檔在裝置本機渲染，因此您可以閱讀敏感 PDF 和辦公文檔而無需上傳到雲端。應用採用簡潔現代的介面，便於瀏覽檔案、一鍵開啟文檔，並支援淺色與深色主題切換以提升閱讀體驗。依託 Flutter 的跨平台引擎與內建在地化，pdf_reader 可適配多語言與多平台，同時保持一致的體驗。",
+      "p3": "作為靈活的開源專案，pdf_reader 適合需要簡單而強大 PDF 閱讀與文檔檢視能力的使用者和開發者。它既可作為日常使用的 PDF 手冊、電子書、投影片、表格和筆記檢視器，也可作為建構自訂文檔應用的基礎。如果您正在尋找免費、多格式、易用且易擴展的 PDF 閱讀器與離線文檔檢視器，pdf_reader 是一個可靠選擇。"
+    },
+    "downloads": {
+      "title": "依平台下載",
+      "android": "Android",
+      "androidDesc": "在 Google Play 取得應用",
+      "other": "Windows、macOS、Linux、iOS",
+      "otherDesc": "從 GitHub Releases 下載",
+      "openStore": "開啟 Google Play",
+      "viewReleases": "檢視發行版"
     }
   },
   "contactPage": {

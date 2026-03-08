@@ -11,6 +11,7 @@ export {
   generateHomeMetadata,
   generateToolsListMetadata,
   generateAboutMetadata,
+  generateDownloadAppMetadata,
   generateFaqMetadata,
   generatePrivacyMetadata,
   generateContactMetadata,

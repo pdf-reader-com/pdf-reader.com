@@ -209,6 +209,19 @@ export function generateAboutMetadata(locale: Locale, translations?: { title: st
 }
 
 /**
+ * Generate metadata for the download app page
+ */
+export function generateDownloadAppMetadata(locale: Locale, translations?: { title: string; description: string }): Metadata {
+  return generateBaseMetadata({
+    locale,
+    path: '/download-app',
+    title: translations?.title || 'Download App',
+    description: translations?.description || `Download PDF Reader - a fast, lightweight and privacy-friendly PDF and document reader for Android, Windows, macOS, Linux and iOS.`,
+    keywords: ['download', 'PDF reader', 'Android', 'iOS', 'desktop app', 'document viewer'],
+  });
+}
+
+/**
  * Generate metadata for the FAQ page
  */
 export function generateFaqMetadata(locale: Locale, translations?: { title: string; description: string }): Metadata {

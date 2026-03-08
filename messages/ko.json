@@ -24,6 +24,10 @@
       "title": "문의하기",
       "description": "PDFReader 팀에 연락하세요. 여러분의 의견을 듣고 싶습니다."
     },
+    "downloadApp": {
+      "title": "앱 다운로드",
+      "description": "PDF Reader 다운로드 - Android, Windows, macOS, Linux 및 iOS용 빠르고 가벼우며 개인정보를 존중하는 PDF 및 문서 리더."
+    },
     "keywords": {
       "pdfTools": "PDF 도구",
       "mergePdf": "PDF 병합",
@@ -40,11 +44,12 @@
     "navigation": {
       "home": "홈",
       "tools": "도구",
+      "workflow": "워크플로",
+      "downloadApp": "앱 다운로드",
       "about": "소개",
       "faq": "자주 묻는 질문",
       "privacy": "개인정보",
-      "contact": "문의",
-      "workflow": "워크플로"
+      "contact": "문의"
     },
     "buttons": {
       "upload": "파일 업로드",
@@ -2316,6 +2321,24 @@
       "title": "시작할 준비가 되셨나요?",
       "description": "{count}개 이상의 PDF 도구를 살펴보고 {brand}가 귀하를 위해 무엇을 할 수 있는지 확인해 보세요.",
       "button": "모든 도구 탐색"
+    }
+  },
+  "downloadAppPage": {
+    "title": "Download PDF Reader",
+    "subtitle": "A fast, lightweight and privacy-friendly PDF and document reader for all platforms.",
+    "intro": {
+      "p1": "PDF Reader is a fast, lightweight and privacy-friendly PDF and document reader designed for everyday use. Built with Flutter, it runs smoothly across platforms and lets you open and preview a wide range of file types, including PDF, Markdown, DOCX, PPT, XLSX and other common office document formats. Whether you need a simple PDF viewer, a convenient document reader for work, or a multi-format file viewer for study, pdf_reader helps you get to your content quickly without unnecessary clutter.",
+      "p2": "With pdf_reader you can keep full control of your files. Documents are rendered locally on your device, so you can read sensitive PDFs and office files without uploading them to the cloud. The app focuses on a clean, modern interface that makes it easy to browse your files, open documents with a single tap and switch between light and dark themes for comfortable reading. Thanks to Flutter's cross-platform engine and built-in localization, pdf_reader can be adapted to multiple languages and platforms while keeping a consistent user experience.",
+      "p3": "Designed as a flexible, open-source project, pdf_reader is ideal for users and developers who want a simple yet powerful PDF reader and document viewer. It works well as a daily driver for opening PDF manuals, ebooks, slides, spreadsheets and notes, or as a base for building a customized document app. If you are looking for a free, multi-format PDF reader and offline document viewer that is easy to use and easy to extend, pdf_reader is a solid choice."
+    },
+    "downloads": {
+      "title": "Download by Platform",
+      "android": "Android",
+      "androidDesc": "Get the app on Google Play",
+      "other": "Windows, macOS, Linux, iOS",
+      "otherDesc": "Download from GitHub Releases",
+      "openStore": "Open Google Play",
+      "viewReleases": "View Releases"
     }
   },
   "contactPage": {

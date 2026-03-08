@@ -24,6 +24,10 @@
       "title": "Contáctanos",
       "description": "Ponte en contacto con el equipo de PDFReader. Nos encantaría saber de ti."
     },
+    "downloadApp": {
+      "title": "Descargar aplicación",
+      "description": "Descargue PDF Reader: un lector de PDF y documentos rápido, ligero y respetuoso con la privacidad para Android, Windows, macOS, Linux e iOS."
+    },
     "keywords": {
       "pdfTools": "herramientas PDF",
       "mergePdf": "combinar PDF",
@@ -40,11 +44,12 @@
     "navigation": {
       "home": "Inicio",
       "tools": "Herramientas",
+      "workflow": "Flujo de trabajo",
+      "downloadApp": "Descargar app",
       "about": "Acerca de",
       "faq": "Preguntas Frecuentes",
       "privacy": "Privacidad",
-      "contact": "Contacto",
-      "workflow": "Flujo de trabajo"
+      "contact": "Contacto"
     },
     "buttons": {
       "upload": "Subir Archivos",
@@ -313,6 +318,24 @@
       "title": "Ready to Get Started?",
       "description": "Explore our {count}+ PDF tools and see what {brand} can do for you.",
       "button": "Browse All Tools"
+    }
+  },
+  "downloadAppPage": {
+    "title": "Download PDF Reader",
+    "subtitle": "A fast, lightweight and privacy-friendly PDF and document reader for all platforms.",
+    "intro": {
+      "p1": "PDF Reader is a fast, lightweight and privacy-friendly PDF and document reader designed for everyday use. Built with Flutter, it runs smoothly across platforms and lets you open and preview a wide range of file types, including PDF, Markdown, DOCX, PPT, XLSX and other common office document formats. Whether you need a simple PDF viewer, a convenient document reader for work, or a multi-format file viewer for study, pdf_reader helps you get to your content quickly without unnecessary clutter.",
+      "p2": "With pdf_reader you can keep full control of your files. Documents are rendered locally on your device, so you can read sensitive PDFs and office files without uploading them to the cloud. The app focuses on a clean, modern interface that makes it easy to browse your files, open documents with a single tap and switch between light and dark themes for comfortable reading. Thanks to Flutter's cross-platform engine and built-in localization, pdf_reader can be adapted to multiple languages and platforms while keeping a consistent user experience.",
+      "p3": "Designed as a flexible, open-source project, pdf_reader is ideal for users and developers who want a simple yet powerful PDF reader and document viewer. It works well as a daily driver for opening PDF manuals, ebooks, slides, spreadsheets and notes, or as a base for building a customized document app. If you are looking for a free, multi-format PDF reader and offline document viewer that is easy to use and easy to extend, pdf_reader is a solid choice."
+    },
+    "downloads": {
+      "title": "Download by Platform",
+      "android": "Android",
+      "androidDesc": "Get the app on Google Play",
+      "other": "Windows, macOS, Linux, iOS",
+      "otherDesc": "Download from GitHub Releases",
+      "openStore": "Open Google Play",
+      "viewReleases": "View Releases"
     }
   },
   "contactPage": {
