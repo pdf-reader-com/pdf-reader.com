@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
-import { ArrowRight, Zap, Wrench, Lock, Sparkles, Edit, FileImage, FolderOpen, Settings, ShieldCheck, Star, Smartphone, Github } from 'lucide-react';
+import { ArrowRight, Zap, Wrench, Lock, Sparkles, Edit, FileImage, FolderOpen, Settings, ShieldCheck, Star } from 'lucide-react';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { ToolGrid } from '@/components/tools/ToolGrid';
@@ -11,9 +11,6 @@ import { Card } from '@/components/ui/Card';
 import { getAllTools, getToolsByCategory, getPopularTools } from '@/config/tools';
 import { type Locale } from '@/lib/i18n/config';
 import { CATEGORY_INFO, type ToolCategory } from '@/types/tool';
-
-const ANDROID_PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.pdf_reader.pdf_reader';
-const GITHUB_URL = 'https://github.com/pdf-reader-com/pdf-reader.com';
 
 interface HomePageClientProps {
   locale: Locale;
@@ -159,48 +156,6 @@ export default function HomePageClient({ locale, localizedToolContent }: HomePag
                   </Card>
                 );
               })}
-            </div>
-          </div>
-        </section>
-
-        {/* PDF Reader App Section */}
-        <section className="py-16 bg-[hsl(var(--color-muted)/0.3)]" aria-labelledby="pdf-reader-app-heading">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 id="pdf-reader-app-heading" className="text-2xl font-bold text-[hsl(var(--color-foreground))] mb-6 text-center">
-                PDF Reader App
-              </h2>
-              <div className="prose prose-lg max-w-none text-[hsl(var(--color-muted-foreground))] space-y-4 mb-8">
-                <p>
-                  PDF Reader is a fast, lightweight and privacy-friendly PDF and document reader designed for everyday use. Built with Flutter, it runs smoothly across platforms and lets you open and preview a wide range of file types, including PDF, Markdown, DOCX, PPT, XLSX and other common office document formats. Whether you need a simple PDF viewer, a convenient document reader for work, or a multi-format file viewer for study, pdf_reader helps you get to your content quickly without unnecessary clutter.
-                </p>
-                <p>
-                  With pdf_reader you can keep full control of your files. Documents are rendered locally on your device, so you can read sensitive PDFs and office files without uploading them to the cloud. The app focuses on a clean, modern interface that makes it easy to browse your files, open documents with a single tap and switch between light and dark themes for comfortable reading. Thanks to Flutter&apos;s cross-platform engine and built-in localization, pdf_reader can be adapted to multiple languages and platforms while keeping a consistent user experience.
-                </p>
-                <p>
-                  Designed as a flexible, open-source project, pdf_reader is ideal for users and developers who want a simple yet powerful PDF reader and document viewer. It works well as a daily driver for opening PDF manuals, ebooks, slides, spreadsheets and notes, or as a base for building a customized document app. If you are looking for a free, multi-format PDF reader and offline document viewer that is easy to use and easy to extend, pdf_reader is a solid choice.
-                </p>
-              </div>
-              <div className="flex flex-wrap gap-4 justify-center">
-                <a
-                  href={ANDROID_PLAY_STORE_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:opacity-90 transition-opacity"
-                >
-                  <Smartphone className="h-5 w-5" />
-                  Download Android App
-                </a>
-                <a
-                  href={GITHUB_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-[hsl(var(--color-primary))] text-[hsl(var(--color-primary))] font-semibold hover:bg-[hsl(var(--color-primary)/0.1)] transition-colors"
-                >
-                  <Github className="h-5 w-5" />
-                  Open Source on GitHub
-                </a>
-              </div>
             </div>
           </div>
         </section>
