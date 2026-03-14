@@ -38,11 +38,19 @@ export interface ToolMetadataOptions extends BaseMetadataOptions {
 }
 
 /**
+ * 确保 URL 以尾部斜杠结尾（与 next.config trailingSlash: true 一致）
+ * 避免 /en 与 /en/ 产生重复页面
+ */
+function ensureTrailingSlash(url: string): string {
+  return url.endsWith('/') ? url : `${url}/`;
+}
+
+/**
  * Generate the canonical URL for a page
  */
 export function getCanonicalUrl(locale: Locale, path: string = ''): string {
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
-  return `${siteConfig.url}/${locale}${cleanPath}`;
+  return ensureTrailingSlash(`${siteConfig.url}/${locale}${cleanPath}`);
 }
 
 /**
@@ -53,11 +61,11 @@ export function getAlternateUrls(path: string = ''): Record<string, string> {
   const alternates: Record<string, string> = {};
 
   for (const locale of locales) {
-    alternates[locale] = `${siteConfig.url}/${locale}${cleanPath}`;
+    alternates[locale] = ensureTrailingSlash(`${siteConfig.url}/${locale}${cleanPath}`);
   }
 
   // Add x-default pointing to English
-  alternates['x-default'] = `${siteConfig.url}/en${cleanPath}`;
+  alternates['x-default'] = ensureTrailingSlash(`${siteConfig.url}/en${cleanPath}`);
 
   return alternates;
 }

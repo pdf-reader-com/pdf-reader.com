@@ -47,6 +47,13 @@ const STATIC_PAGES = [
 ];
 
 /**
+ * 确保 URL 以尾部斜杠结尾（与 next.config trailingSlash: true 一致）
+ */
+function withTrailingSlash(url: string): string {
+  return url.endsWith('/') ? url : `${url}/`;
+}
+
+/**
  * Generate sitemap entries for a specific locale
  */
 function generateLocaleEntries(locale: Locale, lastModified: Date): MetadataRoute.Sitemap {
@@ -55,7 +62,7 @@ function generateLocaleEntries(locale: Locale, lastModified: Date): MetadataRout
   // Add static pages
   for (const page of STATIC_PAGES) {
     entries.push({
-      url: `${siteConfig.url}/${locale}${page.path}`,
+      url: withTrailingSlash(`${siteConfig.url}/${locale}${page.path}`),
       lastModified,
       changeFrequency: page.changeFrequency as 'daily' | 'weekly' | 'monthly',
       priority: page.priority,
@@ -66,7 +73,7 @@ function generateLocaleEntries(locale: Locale, lastModified: Date): MetadataRout
   const tools = getAllTools();
   for (const tool of tools) {
     entries.push({
-      url: `${siteConfig.url}/${locale}/tools/${tool.slug}`,
+      url: withTrailingSlash(`${siteConfig.url}/${locale}/tools/${tool.slug}`),
       lastModified,
       changeFrequency: CHANGE_FREQUENCY.toolPage,
       priority: PRIORITY.toolPage,
@@ -82,6 +89,14 @@ function generateLocaleEntries(locale: Locale, lastModified: Date): MetadataRout
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
   const allEntries: MetadataRoute.Sitemap = [];
+  
+  // 根路径入口页（可被索引的静态页）
+  allEntries.push({
+    url: `${siteConfig.url}/`,
+    lastModified,
+    changeFrequency: 'daily',
+    priority: 1.0,
+  });
   
   // Generate entries for each locale
   for (const locale of locales) {
