@@ -14,6 +14,9 @@ export default function GlobalError({ error, reset }: GlobalErrorProps) {
 
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-1439748105182602" />
+      </head>
       <body style={{ 
         margin: 0, 
         minHeight: '100vh', 
